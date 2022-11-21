@@ -59,17 +59,17 @@
                     <connections>
                         <outlet property="accessButton" destination="woC-55-61g" id="AbK-K4-ZJT"/>
                         <outlet property="duckImageView" destination="PE4-3y-J21" id="H8Y-rf-ABV"/>
-                        <segue destination="sTV-bN-2Db" kind="presentation" identifier="Main" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="nPh-t4-KQw"/>
+                        <segue destination="sTV-bN-2Db" kind="presentation" identifier="Gallery" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="nPh-t4-KQw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
-        <!--Main-->
+        <!--Gallery-->
         <scene sceneID="bJg-tQ-gsV">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="sTV-bN-2Db" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Gallery" id="sTV-bN-2Db" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="xhm-iK-KX0"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hFJ-WR-dnH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

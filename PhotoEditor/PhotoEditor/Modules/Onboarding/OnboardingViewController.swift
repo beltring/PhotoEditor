@@ -31,14 +31,14 @@ class OnboardingViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func tappedAllowAccessButton(_ sender: UIButton) {
-
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            let myPickerController = UIImagePickerController()
-            myPickerController.delegate = self
-            myPickerController.sourceType = .photoLibrary
+        performSegue(withIdentifier: "Gallery", sender: self)
+//        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+//            let myPickerController = UIImagePickerController()
+//            myPickerController.delegate = self
+//            myPickerController.sourceType = .photoLibrary
 //            myPickerController.modalPresentationStyle = .fullScreen
-            self.present(myPickerController, animated: true, completion: nil)
-        }
+//            self.present(myPickerController, animated: true, completion: nil)
+//        }
     }
 
     // MARK: - Navigation
