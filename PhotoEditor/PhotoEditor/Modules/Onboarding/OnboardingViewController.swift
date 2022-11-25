@@ -32,21 +32,6 @@ class OnboardingViewController: UIViewController {
 
     @IBAction func tappedAllowAccessButton(_ sender: UIButton) {
         performSegue(withIdentifier: "Gallery", sender: self)
-//        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-//            let myPickerController = UIImagePickerController()
-//            myPickerController.delegate = self
-//            myPickerController.sourceType = .photoLibrary
-//            myPickerController.modalPresentationStyle = .fullScreen
-//            self.present(myPickerController, animated: true, completion: nil)
-//        }
-    }
-
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "Main" else { return }
-        guard let destination = segue.destination as? MainViewController else { return }
-        destination.image = selectedImage
     }
 }
 
