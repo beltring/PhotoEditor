@@ -1,8 +1,19 @@
 {
   "images" : [
     {
-      "filename" : "lasso.png",
-      "idiom" : "universal"
+      "filename" : "Lasso.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Lasso@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Lasso@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

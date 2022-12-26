@@ -82,9 +82,6 @@ extension GalleryViewController: ResizableCollectionViewDataSource, ResizableCol
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let asset = allPhotos.object(at: indexPath.row)
-//        selectedAsset = asset
-//        performSegue(withIdentifier: "Main", sender: self)
         let asset = allPhotos[indexPath.item]
         guard asset.mediaType == .image else {
             let alert = UIAlertController(title: "Not Supported Yet", message: "Sorry, only images supported for now", preferredStyle: .alert)
@@ -95,16 +92,6 @@ extension GalleryViewController: ResizableCollectionViewDataSource, ResizableCol
         currentIndexPath = indexPath
         selectedAsset = asset
         performSegue(withIdentifier: "Main", sender: self)
-
-//        let edit = EditVC()
-//        let transitionController = ImageDetailTransitionController()
-//        transitionController.fromDelegate = self
-//        transitionController.toDelegate = edit
-//        edit.modalPresentationStyle = .custom
-//        edit.transitioningDelegate = transitionController
-//        edit.cacheImg = imagesCache[asset.localIdentifier]?.image
-//        edit.asset = asset
-//        self.transitionController = transitionController
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

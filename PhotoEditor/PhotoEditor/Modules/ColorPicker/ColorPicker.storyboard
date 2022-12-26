@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVM-Za-0ps">
+                                <rect key="frame" x="20" y="69" width="54" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="iIE-Vp-2eM"/>
+                                    <constraint firstAttribute="height" constant="44" id="yG9-eO-DDy"/>
+                                </constraints>
+                                <state key="normal" title=""/>
+                                <buttonConfiguration key="configuration" style="plain" image="pipette"/>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Qus-l1-nBH">
+                                <rect key="frame" x="-4" y="310" width="381" height="32"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Grid"/>
+                                    <segment title="Spectrum"/>
+                                    <segment title="Sliders"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZC-Yh-6cB">
+                                <rect key="frame" x="314" y="69" width="54" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="PLU-A9-BEA"/>
+                                    <constraint firstAttribute="width" constant="54" id="VVw-43-vXX"/>
+                                </constraints>
+                                <state key="normal" title=""/>
+                                <buttonConfiguration key="configuration" style="plain" image="cross"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.2050973475" green="0.22342821960000001" blue="0.23336368800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TVM-Za-0ps" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="AZV-44-FAt"/>
+                            <constraint firstItem="BZC-Yh-6cB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="JIU-6r-6tk"/>
+                            <constraint firstItem="TVM-Za-0ps" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="k66-EZ-Xhs"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BZC-Yh-6cB" secondAttribute="trailing" constant="25" id="lYB-FL-j1N"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cross" width="64" height="64"/>
+        <image name="pipette" width="32" height="32"/>
+    </resources>
+</document>

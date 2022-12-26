@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		CE0B2EAD29265DBF006F23A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0B2EAC29265DBF006F23A0 /* Assets.xcassets */; };
 		CE0B2EB029265DBF006F23A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0B2EAE29265DBF006F23A0 /* LaunchScreen.storyboard */; };
 		CE323F16292E4F6300AF224F /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE323F15292E4F6300AF224F /* SliderView.swift */; };
+		CE4516952952D5A600ED94AF /* PencilKitInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4516942952D5A600ED94AF /* PencilKitInterface.swift */; };
 		CE451AF9292DEEE90051C222 /* ToolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE451AF8292DEEE90051C222 /* ToolCell.swift */; };
 		CE4B6B212930893600CA707A /* ResizableCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4B6B202930893600CA707A /* ResizableCollectionView.swift */; };
 		CE4B6B2429309C7C00CA707A /* LoadedImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4B6B2329309C7C00CA707A /* LoadedImageInfo.swift */; };
@@ -30,7 +31,11 @@
 		CE775196292795350058259C /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE775195292795350058259C /* GalleryViewController.swift */; };
 		CE775198292795410058259C /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE775197292795410058259C /* Gallery.storyboard */; };
 		CE77519A292797680058259C /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE775199292797680058259C /* UIImageViewExtension.swift */; };
+		CE831D6B2951E0D3009C6C1D /* PKCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE831D6A2951E0D3009C6C1D /* PKCanvas.swift */; };
 		CEB393BB292B99D400CA2884 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB393B9292B99D400CA2884 /* GalleryCell.swift */; };
+		CECE5B7B2930F49C00C4D77F /* ToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE5B7A2930F49C00C4D77F /* ToolsView.swift */; };
+		CED75E0B29548090000F8BDC /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED75E0A29548090000F8BDC /* ColorPickerViewController.swift */; };
+		CED75E0D29548106000F8BDC /* ColorPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED75E0C29548106000F8BDC /* ColorPicker.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +48,7 @@
 		CE0B2EAF29265DBF006F23A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE0B2EB129265DBF006F23A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE323F15292E4F6300AF224F /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		CE4516942952D5A600ED94AF /* PencilKitInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilKitInterface.swift; sourceTree = "<group>"; };
 		CE451AF8292DEEE90051C222 /* ToolCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolCell.swift; sourceTree = "<group>"; };
 		CE4B6B202930893600CA707A /* ResizableCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableCollectionView.swift; sourceTree = "<group>"; };
 		CE4B6B2329309C7C00CA707A /* LoadedImageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadedImageInfo.swift; sourceTree = "<group>"; };
@@ -59,7 +65,11 @@
 		CE775195292795350058259C /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		CE775197292795410058259C /* Gallery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Gallery.storyboard; sourceTree = "<group>"; };
 		CE775199292797680058259C /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		CE831D6A2951E0D3009C6C1D /* PKCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCanvas.swift; sourceTree = "<group>"; };
 		CEB393B9292B99D400CA2884 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
+		CECE5B7A2930F49C00C4D77F /* ToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsView.swift; sourceTree = "<group>"; };
+		CED75E0A29548090000F8BDC /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		CED75E0C29548106000F8BDC /* ColorPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorPicker.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +102,10 @@
 		CE0B2EA229265DBE006F23A0 /* PhotoEditor */ = {
 			isa = PBXGroup;
 			children = (
-				CE4B6B2229309C7100CA707A /* Models */,
 				CE77518B29275DD10058259C /* emojiDuck.gif */,
 				CE0B2EB129265DBF006F23A0 /* Info.plist */,
 				CE0B2EB7292661CD006F23A0 /* Application */,
+				CE4B6B2229309C7100CA707A /* Models */,
 				CE0B2EB9292661EB006F23A0 /* Modules */,
 				CE0B2EB8292661DB006F23A0 /* Resources */,
 				CE77518529274E4B0058259C /* Utils */,
@@ -124,6 +134,7 @@
 		CE0B2EB9292661EB006F23A0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CED75E092954806A000F8BDC /* ColorPicker */,
 				CE775194292795180058259C /* Gallery */,
 				CE0B2EBA29266301006F23A0 /* Launch */,
 				CE77518D292785450058259C /* Main */,
@@ -152,18 +163,12 @@
 		CE323F14292E4EA900AF224F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE831D692951E036009C6C1D /* Canvas */,
+				CE5DFF85293496700034A634 /* Tools */,
 				CE323F15292E4F6300AF224F /* SliderView.swift */,
 				CE4B6B202930893600CA707A /* ResizableCollectionView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		CE451AF7292DEECC0051C222 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				CE451AF8292DEEE90051C222 /* ToolCell.swift */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		CE4B6B2229309C7100CA707A /* Models */ = {
@@ -173,6 +178,15 @@
 				CE4B6B2529309E4000CA707A /* Content.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CE5DFF85293496700034A634 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				CECE5B7A2930F49C00C4D77F /* ToolsView.swift */,
+				CE451AF8292DEEE90051C222 /* ToolCell.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		CE77518529274E4B0058259C /* Utils */ = {
@@ -202,7 +216,6 @@
 			children = (
 				CE775190292785750058259C /* Main.storyboard */,
 				CE775192292785A70058259C /* MainViewController.swift */,
-				CE451AF7292DEECC0051C222 /* Cell */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -223,6 +236,24 @@
 				CEB393B9292B99D400CA2884 /* GalleryCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		CE831D692951E036009C6C1D /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				CE831D6A2951E0D3009C6C1D /* PKCanvas.swift */,
+				CE4516942952D5A600ED94AF /* PencilKitInterface.swift */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		CED75E092954806A000F8BDC /* ColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				CED75E0A29548090000F8BDC /* ColorPickerViewController.swift */,
+				CED75E0C29548106000F8BDC /* ColorPicker.storyboard */,
+			);
+			path = ColorPicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +292,7 @@
 				};
 			};
 			buildConfigurationList = CE0B2E9B29265DBD006F23A0 /* Build configuration list for PBXProject "PhotoEditor" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -286,6 +317,7 @@
 				CE77518C29275DD10058259C /* emojiDuck.gif in Resources */,
 				CE775198292795410058259C /* Gallery.storyboard in Resources */,
 				CE775191292785750058259C /* Main.storyboard in Resources */,
+				CED75E0D29548106000F8BDC /* ColorPicker.storyboard in Resources */,
 				CE0B2EB029265DBF006F23A0 /* LaunchScreen.storyboard in Resources */,
 				CE0B2EAD29265DBF006F23A0 /* Assets.xcassets in Resources */,
 				CE0B2EAB29265DBE006F23A0 /* Onboarding.storyboard in Resources */,
@@ -299,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED75E0B29548090000F8BDC /* ColorPickerViewController.swift in Sources */,
 				CE0B2EA829265DBE006F23A0 /* OnboardingViewController.swift in Sources */,
 				CE775196292795350058259C /* GalleryViewController.swift in Sources */,
 				CEB393BB292B99D400CA2884 /* GalleryCell.swift in Sources */,
@@ -307,7 +340,10 @@
 				CE4B6B212930893600CA707A /* ResizableCollectionView.swift in Sources */,
 				CE4B6B282930B4B200CA707A /* PHImageManagerExtension.swift in Sources */,
 				CE451AF9292DEEE90051C222 /* ToolCell.swift in Sources */,
+				CE831D6B2951E0D3009C6C1D /* PKCanvas.swift in Sources */,
 				CE0B2EA429265DBE006F23A0 /* AppDelegate.swift in Sources */,
+				CE4516952952D5A600ED94AF /* PencilKitInterface.swift in Sources */,
+				CECE5B7B2930F49C00C4D77F /* ToolsView.swift in Sources */,
 				CE77518829274E6A0058259C /* UIViewExtensions.swift in Sources */,
 				CE775193292785A70058259C /* MainViewController.swift in Sources */,
 				CE4B6B2429309C7C00CA707A /* LoadedImageInfo.swift in Sources */,

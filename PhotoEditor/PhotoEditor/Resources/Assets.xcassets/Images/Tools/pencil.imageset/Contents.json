@@ -1,8 +1,19 @@
 {
   "images" : [
     {
-      "filename" : "pencil.png",
-      "idiom" : "universal"
+      "filename" : "Pencil.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Pencil@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Pencil@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {
