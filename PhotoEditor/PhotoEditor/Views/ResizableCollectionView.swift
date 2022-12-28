@@ -92,11 +92,9 @@ open class ResizableCollectionView: UICollectionView {
             self.collectionViewLayout = self.collectionViewFlowLayout(self._numberOfCells)
         }
     }
+
     fileprivate weak var myDataSource: ResizableCollectionViewDataSource?
-
-
     fileprivate var pinchGesture: UIPinchGestureRecognizer! = nil
-
     fileprivate var zoomingStatus: ZoomStatus = .noZoom
 
     enum ZoomStatus {
@@ -187,8 +185,8 @@ open class ResizableCollectionView: UICollectionView {
         if self.myDataSource == nil {
             layout.itemSize = CGSize(width: cellWidth , height: cellWidth)
         } else {
-            let h = self.myDataSource!.cellHeight(self)
-            layout.itemSize = CGSize(width: cellWidth , height: h > 0 ? h : cellWidth)
+            let height = self.myDataSource!.cellHeight(self)
+            layout.itemSize = CGSize(width: cellWidth , height: height > 0 ? height: cellWidth)
         }
         layout.sectionInset = UIEdgeInsets(top: marginOutline, left: marginOutline, bottom: marginOutline, right: marginOutline)
         layout.minimumInteritemSpacing = marginCells

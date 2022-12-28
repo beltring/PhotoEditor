@@ -8,17 +8,21 @@
 import UIKit
 import PencilKit
 import Photos
+import FlexColorPicker
 
 class MainViewController: UIViewController {
 
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var backButton: UIButton!
+    @IBOutlet private weak var colorView: UIView!
+    @IBOutlet private weak var colorPickerButton: UIButton!
     @IBOutlet private weak var saveButton: UIButton!
 
     private lazy var sliderView: SliderView = {
         let slider = SliderView(frame: .zero)
         slider.translatesAutoresizingMaskIntoConstraints = false
         slider.isHidden = true
+        slider.delegate = self
         return slider
     }()
 
@@ -30,7 +34,6 @@ class MainViewController: UIViewController {
 
     private lazy var backButton2: UIButton = {
         let button = UIButton(frame: .zero)
-        
         return button
     }()
 
@@ -45,8 +48,7 @@ class MainViewController: UIViewController {
     }()
 
     var asset: PHAsset?
-
-    var pencilKitCanvas =  PKCanvas()
+    var selectedColor: UIColor?
 
     // MARK: - Lifecycle
 
@@ -64,8 +66,8 @@ class MainViewController: UIViewController {
         guard let asset = asset else { return }
         imageView.fetchImage(asset: asset, contentMode: .aspectFill, targetSize: imageView.frame.size)
     }
-//
-//    override func viewDidAppear(_ animated: Bool) {
+
+    //    override func viewDidAppear(_ animated: Bool) {
 //        super.viewDidAppear(animated)
 //        addPencilKit()
 //        guard
@@ -106,15 +108,6 @@ class MainViewController: UIViewController {
         ])
     }
 
-    private func addPencilKit() {
-        view.backgroundColor = .clear
-
-        pencilKitCanvas = createPencilKitCanvas(frame: view.frame, delegate: self)
-        pencilKitCanvas.image = imageView.image
-        view.addSubview(pencilKitCanvas)
-        pencilKitCanvas.updateImage()
-    }
-
     // MARK: - Actions
 
     @IBAction func tappedButton(_ sender: UIButton) {
@@ -122,8 +115,25 @@ class MainViewController: UIViewController {
         sliderView.isHidden = true
     }
 
+    @IBAction func tappedColorPickerButton(_ sender: UIButton) {
+        let colorPickerController = DefaultColorPickerViewController()
+        colorPickerController.delegate = self
+        present(colorPickerController, animated: true)
+    }
+
     @IBAction func tappedBackButton(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
+    }
+
+    @IBAction func tappedAddButton(_ sender: UIButton) {
+        print("\n MYLOG: tappedAddButton")
+
+    }
+
+    @IBAction func tappedSaveButton(_ sender: UIButton) {
+        print("\n MYLOG: Save image")
+        guard let image = imageView.image else { return }
+        UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
     }
 }
 
@@ -136,6 +146,31 @@ extension MainViewController: ToolsViewDelegate {
     }
 }
 
-extension MainViewController: PencilKitInterface { }
+// MARK: - SliderViewDelegate
 
-extension MainViewController: PencilKitDelegate { }
+extension MainViewController: SliderViewDelegate {
+    func didSelectWidth(width: Float) {
+        print("\n MYLOG: width \(width)")
+        let color = selectedColor ?? .white
+        toolsView.configureWitdh(width: width, color: color)
+    }
+}
+
+// MARK: - ColorPickerDelegate
+
+extension MainViewController: ColorPickerDelegate {
+
+    func colorPicker(_ colorPicker: ColorPickerController, selectedColor: UIColor, usingControl: ColorControl) {
+        // code to handle that user selected a color without confirmed it yet (may change selected color)
+        self.selectedColor = selectedColor
+        colorView.backgroundColor = selectedColor
+        toolsView.configureWitdh(width: 1, color: selectedColor)
+    }
+
+    func colorPicker(_ colorPicker: ColorPickerController, confirmedColor: UIColor, usingControl: ColorControl) {
+        // code to handle that user has confirmed selected color
+        self.selectedColor = confirmedColor
+        colorView.backgroundColor = confirmedColor
+        toolsView.configureWitdh(width: 1, color: confirmedColor)
+    }
+}

@@ -7,20 +7,19 @@
 
 import UIKit
 import ImageIO
+
 // FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
 // Consider refactoring the code to use the non-optional operators.
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
+  case let (lhs?, rhs?):
+    return lhs < rhs
   case (nil, _?):
     return true
   default:
     return false
   }
 }
-
-
 
 extension UIImage {
 
@@ -79,7 +78,7 @@ extension UIImage {
                 Unmanaged.passUnretained(kCGImagePropertyGIFDelayTime).toOpaque()), to: AnyObject.self)
         }
 
-        delay = delayObject as! Double
+        delay = delayObject as? Double ?? 0.0
 
         if delay < 0.01 {
             delay = 0.01
@@ -88,34 +87,34 @@ extension UIImage {
         return delay
     }
 
-    class func gcdForPair(_ a: Int?, _ b: Int?) -> Int {
-        var a = a
-        var b = b
-        if b == nil || a == nil {
-            if b != nil {
-                return b!
-            } else if a != nil {
-                return a!
+    class func gcdForPair(_ rhs: Int?, _ lhs: Int?) -> Int {
+        var rhs = rhs
+        var lhs = lhs
+        if lhs == nil || rhs == nil {
+            if lhs != nil {
+                return lhs!
+            } else if rhs != nil {
+                return rhs!
             } else {
                 return 0
             }
         }
 
-        if a < b {
-            let c = a
-            a = b
-            b = c
+        if rhs < lhs {
+            let thirdVar = rhs
+            rhs = lhs
+            lhs = thirdVar
         }
 
         var rest: Int
         while true {
-            rest = a! % b!
+            rest = rhs! % lhs!
 
             if rest == 0 {
-                return b!
+                return lhs!
             } else {
-                a = b
-                b = rest
+                rhs = lhs
+                lhs = rest
             }
         }
     }
@@ -139,12 +138,12 @@ extension UIImage {
         var images = [CGImage]()
         var delays = [Int]()
 
-        for i in 0..<count {
-            if let image = CGImageSourceCreateImageAtIndex(source, i, nil) {
+        for item in 0..<count {
+            if let image = CGImageSourceCreateImageAtIndex(source, item, nil) {
                 images.append(image)
             }
 
-            let delaySeconds = UIImage.delayForImageAtIndex(Int(i),
+            let delaySeconds = UIImage.delayForImageAtIndex(Int(item),
                 source: source)
             delays.append(Int(delaySeconds * 1000.0)) // Seconds to ms
         }
@@ -164,9 +163,9 @@ extension UIImage {
 
         var frame: UIImage
         var frameCount: Int
-        for i in 0..<count {
-            frame = UIImage(cgImage: images[Int(i)])
-            frameCount = Int(delays[Int(i)] / gcd)
+        for item in 0..<count {
+            frame = UIImage(cgImage: images[Int(item)])
+            frameCount = Int(delays[Int(item)] / gcd)
 
             for _ in 0..<frameCount {
                 frames.append(frame)

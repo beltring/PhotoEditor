@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -48,7 +49,7 @@
                                 <state key="normal" image="clear" catalog="system">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <buttonConfiguration key="configuration" style="plain" image="clear" catalog="system">
+                                <buttonConfiguration key="configuration" style="plain" image="cancel">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -56,7 +57,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="il5-wD-VQv">
-                                <rect key="frame" x="329" y="778.66666666666663" width="49" height="34.333333333333371"/>
+                                <rect key="frame" x="329" y="767" width="49" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="49" id="BHr-MF-Fts"/>
                                     <constraint firstAttribute="height" constant="34.333333333333371" id="N1K-Hf-sE5"/>
@@ -67,30 +68,98 @@
                                 <state key="normal" image="arrow.down.app" catalog="system">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <buttonConfiguration key="configuration" style="plain" image="arrow.down.app" catalog="system">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                <buttonConfiguration key="configuration" style="plain" image="download">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="tappedSaveButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="v17-FJ-ktc"/>
+                                </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lv1-Ga-45S">
+                                <rect key="frame" x="146.66666666666666" y="427.66666666666669" width="100" height="100.00000000000006"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ae6-DH-VIk"/>
+                                    <constraint firstAttribute="width" constant="100" id="y5s-UA-RvN"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAd-dZ-iyd">
+                                <rect key="frame" x="23" y="735.66666666666663" width="33" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="8X9-Jz-Gcm"/>
+                                    <constraint firstAttribute="width" constant="33" id="Hvs-KJ-lwV"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="clear" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" image="Color Picker">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="tappedColorPickerButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="R9d-dk-n3o"/>
+                                </connections>
+                            </button>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" id="3oW-AG-Hih">
+                                <rect key="frame" x="333" y="717" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UtG-Lw-esR">
+                                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6Q-JF-Npy">
+                                            <rect key="frame" x="3.6666666666666856" y="3.6666666666666288" width="33" height="33"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="33" id="hpB-Xn-gjv"/>
+                                                <constraint firstAttribute="height" constant="33" id="vFC-CI-prq"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="clear" catalog="system">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <buttonConfiguration key="configuration" style="plain" image="add">
+                                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </buttonConfiguration>
+                                            <connections>
+                                                <action selector="tappedAddButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="U48-LT-YAh"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="E6Q-JF-Npy" firstAttribute="centerX" secondItem="3oW-AG-Hih" secondAttribute="centerX" id="Rw3-Cq-r3B"/>
+                                    <constraint firstItem="E6Q-JF-Npy" firstAttribute="centerY" secondItem="3oW-AG-Hih" secondAttribute="centerY" id="ZBI-We-dyc"/>
+                                </constraints>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Lv1-Ga-45S" firstAttribute="centerY" secondItem="6Nc-q2-Iad" secondAttribute="centerY" id="LHW-QQ-VUB"/>
                             <constraint firstItem="6Nc-q2-Iad" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Mna-z2-1dc"/>
                             <constraint firstItem="Cts-zq-KfP" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Ntg-0C-ev7"/>
                             <constraint firstItem="Cts-zq-KfP" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="RkA-EB-o9f"/>
+                            <constraint firstItem="nyk-GJ-xVD" firstAttribute="top" secondItem="pAd-dZ-iyd" secondAttribute="bottom" constant="10" id="Rpr-bg-aK3"/>
                             <constraint firstItem="Cts-zq-KfP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="UOq-Zh-b3O"/>
                             <constraint firstItem="6Nc-q2-Iad" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Ucw-d5-NwN"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="il5-wD-VQv" secondAttribute="trailing" constant="15" id="Uwq-dK-1SJ"/>
                             <constraint firstItem="6Nc-q2-Iad" firstAttribute="top" secondItem="Cts-zq-KfP" secondAttribute="bottom" id="VWT-x1-Axu"/>
+                            <constraint firstItem="Lv1-Ga-45S" firstAttribute="centerX" secondItem="6Nc-q2-Iad" secondAttribute="centerX" id="biJ-2s-ggX"/>
                             <constraint firstItem="nyk-GJ-xVD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="eGb-W6-xHT"/>
                             <constraint firstItem="il5-wD-VQv" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="-5" id="k7s-ek-Z0u"/>
                             <constraint firstItem="nyk-GJ-xVD" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="-5" id="lji-km-QKb"/>
+                            <constraint firstItem="il5-wD-VQv" firstAttribute="top" secondItem="3oW-AG-Hih" secondAttribute="bottom" constant="10" id="mlK-Ty-BND"/>
                             <constraint firstAttribute="bottom" secondItem="6Nc-q2-Iad" secondAttribute="bottom" id="v6K-z6-zxm"/>
+                            <constraint firstItem="pAd-dZ-iyd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="23" id="w9z-gT-J83"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="nyk-GJ-xVD" id="wha-ym-Cc2"/>
+                        <outlet property="colorPickerButton" destination="pAd-dZ-iyd" id="7Rf-Jc-3CB"/>
+                        <outlet property="colorView" destination="Lv1-Ga-45S" id="W9a-SC-grO"/>
                         <outlet property="imageView" destination="6Nc-q2-Iad" id="AKE-s4-oPS"/>
                         <outlet property="saveButton" destination="il5-wD-VQv" id="D0O-eL-2Jf"/>
                     </connections>
@@ -101,8 +170,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Color Picker" width="33" height="33.333332061767578"/>
+        <image name="add" width="15" height="15.333333015441895"/>
         <image name="arrow.down.app" catalog="system" width="128" height="114"/>
+        <image name="cancel" width="33" height="33"/>
         <image name="clear" catalog="system" width="128" height="114"/>
+        <image name="download" width="33" height="33"/>
         <image name="undo" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

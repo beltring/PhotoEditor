@@ -58,3 +58,56 @@ extension UIView {
         return bundle.loadNibNamed(nibName, owner: owner, options: options as? [UINib.OptionsKey: Any])?.first(where: { $0 is T }) as! T
     }
 }
+
+extension UIView {
+    var x: CGFloat {
+        get { return frame.origin.x }
+        set { frame.origin.x = newValue }
+    }
+
+    var y: CGFloat {
+        get { return frame.origin.y }
+        set { frame.origin.y = newValue }
+    }
+
+    var right: CGFloat {
+        get { return frame.maxX }
+        set { frame.origin.x = newValue - frame.size.width }
+    }
+
+    var bottom: CGFloat {
+        get { return frame.maxY }
+        set { frame.origin.y = newValue - frame.size.height }
+    }
+
+    var width: CGFloat {
+        get { return frame.width }
+        set { frame.size.width = newValue }
+    }
+
+    var height: CGFloat {
+        get { return frame.height }
+        set { frame.size.height = newValue }
+    }
+
+    func frameIn(view: UIView?) -> CGRect {
+        return self.convert(bounds, to: view)
+    }
+
+    var isInsideAnimationBlock: Bool {
+        let act = action(for: layer, forKey: "position")
+        if act is NSNull {
+            return false
+        }
+        return act != nil
+    }
+
+    func fadeAnimation(duration: Double = 0.2) {
+        let transition = CATransition()
+        transition.duration = duration
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        transition.type = CATransitionType.fade
+
+        self.layer.add(transition, forKey: "fade")
+    }
+}

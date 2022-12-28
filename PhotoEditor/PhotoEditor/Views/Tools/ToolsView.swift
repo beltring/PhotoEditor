@@ -68,6 +68,13 @@ final class ToolsView: UIView {
         collectionView.dataSource = self
         collectionView.reloadData()
     }
+
+    func configureWitdh(width: Float, color: UIColor) {
+        guard let selectedCellIndexPath = selectedCellIndexPath else { return }
+        let cell = collectionView(collectionView, cellForItemAt: selectedCellIndexPath) as? ToolCell
+        let constraint = CGFloat(width)
+        cell?.configure(color: color, constraintConstant: constraint)
+    }
 }
 
 // MARK: - UICollectionViewDelegate&UICollectionViewDataSource&UICollectionViewDelegateFlowLayout

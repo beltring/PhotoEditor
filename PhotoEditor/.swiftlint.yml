@@ -1,0 +1,9 @@
+included:
+  - PhotoEditor
+excluded:
+  - Pods
+line_length:
+  warning: 140
+identifier_name:
+    min_length:
+        warning: 2

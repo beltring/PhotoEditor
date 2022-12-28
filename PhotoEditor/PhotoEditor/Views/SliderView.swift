@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol SliderViewDelegate: AnyObject {
+    func didSelectWidth(width: Float)
+}
+
 final class SliderView: UIView {
+
+    weak var delegate: SliderViewDelegate?
 
     // MARK: - UIElements
 
@@ -18,6 +24,8 @@ final class SliderView: UIView {
         slider.maximumValueImage = nil
         slider.minimumTrackTintColor = .clear
         slider.maximumTrackTintColor = .clear
+        slider.minimumValue = 0.5
+        slider.maximumValue = 15.0
         slider.tintColor = .clear
         return slider
     }()
@@ -48,6 +56,15 @@ final class SliderView: UIView {
         ].forEach { addSubview($0) }
 
         configureConstraint()
+        slider.addTarget(self, action: #selector(updateWidth(sender:)), for: .allEvents)
+    }
+
+    // To use
+    @objc private func updateWidth(sender: UISlider!) {
+        let step: Float = 0.5
+        let roundedValue = round(sender.value / step) * step
+        sender.value = roundedValue
+        delegate?.didSelectWidth(width: sender.value)
     }
 
     private func configureConstraint() {
